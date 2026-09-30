@@ -28,7 +28,7 @@ export const Route = createFileRoute("/")({
 const navigation = [
   ["Módulos", "pilares"], ["Tarot Trader", "tarot"], ["Audioteca", "audio"],
   ["Comparativo", "comparativo"], ["Planos", "planos"], ["FAQ", "faq"],
-];
+] as const;
 
 const pillars = [
   { icon: Sparkles, title: "Tarot Trader", eyebrow: "DIAGNÓSTICO DE VIÉS", text: "22 arquétipos comportamentais revelam o padrão mental que pode sabotar seu pregão." },
@@ -45,7 +45,7 @@ const faqs = [
   ["Funciona no celular e no computador?", "Sim. Você usa o aplicativo mobile e o Web Companion com seus dados sincronizados."],
   ["Serve para Ações, Cripto ou Forex?", "Sim. A disciplina e a psicologia de risco são universais, independentemente do mercado operado."],
   ["E se eu esquecer minha senha?", "A recuperação é instantânea e enviada com segurança para o seu e-mail."],
-];
+] as const;
 
 function scrollTo(id: string) {
   document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
