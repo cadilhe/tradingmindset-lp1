@@ -6,6 +6,7 @@ const LINKS = [
   { href: "#modulos", label: "Módulos" },
   { href: "#tarot", label: "Tarot Trader" },
   { href: "#audioteca", label: "Audioteca" },
+  { href: "#estrategias", label: "Estratégias" },
   { href: "#comparativo", label: "Comparativo" },
   { href: "#planos", label: "Planos" },
   { href: "#faq", label: "FAQ" },
@@ -36,7 +37,7 @@ export function TopNav() {
             </span>
             <span className="hidden text-muted-foreground sm:inline">•</span>
             <span className="text-foreground/90">
-              Versão 2026 com Tarot Trader e Frequências Binaurais
+              Versão 2026 com 20 Estratégias Operacionais, Tarot Trader e Frequências Binaurais
             </span>
             <span className="rounded-full border border-amber/40 bg-background-deep/60 px-2 py-0.5 font-mono font-bold text-amber">
               {time}

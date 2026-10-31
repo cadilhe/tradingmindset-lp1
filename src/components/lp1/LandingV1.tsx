@@ -7,6 +7,7 @@ import {
   Check,
   ChevronDown,
   CircleCheck,
+  Crosshair,
   Headphones,
   Laptop,
   Menu,
@@ -23,6 +24,7 @@ import { useEffect, useState } from "react";
 
 import heroImage from "@/assets/trading-workstation.jpg";
 import { Button } from "@/components/ui/button";
+import { StrategiesShowcase } from "@/components/lp1/StrategiesShowcase";
 import { cn } from "@/lib/utils";
 import { CHECKOUT_URL } from "@/lib/offer";
 
@@ -30,6 +32,7 @@ const navigation = [
   ["Módulos", "pilares"],
   ["Tarot Trader", "tarot"],
   ["Audioteca", "audio"],
+  ["Estratégias", "estrategias"],
   ["Comparativo", "comparativo"],
   ["Planos", "planos"],
   ["FAQ", "faq"],
@@ -55,6 +58,12 @@ const pillars = [
     text: "Checklist diário, Sniper Entry Check e evolução objetiva de 0 a 100%.",
   },
   {
+    icon: Crosshair,
+    title: "20 Estratégias Operacionais",
+    eyebrow: "SETUP VALIDADO ANTES DO CLIQUE",
+    text: "Playbooks de Smart Money, Momentum, Mean Reversion, Consolidação e Price Action com checklist interativo.",
+  },
+  {
     icon: AlertTriangle,
     title: "S.O.S Anti-Tilt",
     eyebrow: "INTERVENÇÃO IMEDIATA",
@@ -75,6 +84,10 @@ const pillars = [
 ];
 
 const faqs = [
+  [
+    "O que é a Biblioteca de Estratégias Operacionais?",
+    "São 20 playbooks de day trade em 5 categorias (Smart Money, Momentum, Mean Reversion, Consolidação e Price Action), com regras de entrada, stop e alvo, gestão de posição, diagramas e checklist interativo. 3 estratégias ficam liberadas no plano gratuito; as 20 fazem parte do Trader PRO. É conteúdo educacional, não uma sala de sinais.",
+  ],
   [
     "Como recebo meu acesso após a compra?",
     "A liberação é imediata. Você recebe o acesso por e-mail e entra no app com o mesmo endereço usado na compra.",
@@ -124,7 +137,7 @@ function Header() {
       <div className="announcement flex min-h-9 items-center justify-between px-4 text-center text-[11px] font-bold uppercase tracking-[0.12em] sm:text-xs">
         <div className="flex items-center gap-2">
           <Zap className="size-3.5 text-urgency" /> Acesso oficial liberado{" "}
-          <span className="hidden sm:inline">• Versão 2026 com Tarot Trader e frequências binaurais •</span>{" "}
+          <span className="hidden sm:inline">• Versão 2026 com 20 Estratégias, Tarot Trader e frequências binaurais •</span>{" "}
           <Countdown />
         </div>
         <div>
@@ -454,7 +467,7 @@ export function LandingV1() {
               Liberação imediata • Garantia de 7 dias • Web + Mobile
             </p>
             <div className="mt-8 grid grid-cols-2 gap-3 text-[11px] text-muted-foreground sm:grid-cols-4">
-              {["+20 áudios neurais", "Tarot diário", "S.O.S Anti-Tilt", "Modo avião"].map((x) => (
+              {["+20 áudios neurais", "20 estratégias com checklist", "Tarot diário", "S.O.S Anti-Tilt"].map((x) => (
                 <span key={x} className="flex items-center gap-1.5">
                   <Check className="size-3.5 text-profit" />
                   {x}
@@ -499,11 +512,18 @@ export function LandingV1() {
         <div className="section-shell">
           <div className="max-w-3xl">
             <span className="eyebrow">Sistema operacional da sua mente</span>
-            <h2 className="section-title mt-4">Seis pilares. Uma disciplina impossível de negociar.</h2>
+            <h2 className="section-title mt-4">Sete pilares. Uma disciplina impossível de negociar.</h2>
           </div>
           <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {pillars.map((p, i) => (
-              <motion.article whileHover={{ y: -5 }} key={p.title} className="feature-card">
+              <motion.article
+                whileHover={{ y: -5 }}
+                key={p.title}
+                className={cn(
+                  "feature-card",
+                  pillars.length % 3 === 1 && i === pillars.length - 1 && "lg:col-span-3",
+                )}
+              >
                 <div className="mb-8 flex items-start justify-between">
                   <span className="feature-icon">
                     <p.icon className="size-5" />
@@ -527,6 +547,8 @@ export function LandingV1() {
         <AudioDemo />
       </section>
 
+      <StrategiesShowcase />
+
       <section id="comparativo" className="border-y border-border bg-surface/40 py-20 sm:py-24">
         <div className="section-shell">
           <div className="text-center">
@@ -546,6 +568,7 @@ export function LandingV1() {
                 ["Após o stop loss", "Tenta recuperar imediatamente", "Ativa S.O.S e cumpre cooldown"],
                 ["Rotina às 08:30", "Abre o gráfico sem preparo", "Executa checklist e lê o viés"],
                 ["Notícias macro", "Descobre durante o movimento", "Recebe alerta 15 min antes"],
+                ["Decisão de entrada", "Entra por impulso, sem critério", "Valida o setup no checklist das 20 estratégias"],
                 ["Consistência", "Confia na memória", "Acompanha score e streak"],
                 ["Modo avião", "Fica sem suporte", "Leva áudios e protocolos offline"],
               ].map((row) => (
@@ -632,6 +655,7 @@ export function LandingV1() {
             <ul className="mx-auto grid max-w-xl gap-4 text-sm">
               {[
                 "Catálogo completo com +20 áudios e frequências",
+                "Biblioteca completa: 20 estratégias com checklists interativos",
                 "Download offline no celular",
                 "Tarot Trader com histórico completo de 90 dias",
                 "Sincronização em nuvem: Mobile + Web",

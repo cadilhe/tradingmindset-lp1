@@ -5,6 +5,7 @@ import { CHECKOUT_URL } from "@/lib/offer";
 
 const BADGES = [
   "+20 Áudios e Ondas Binaurais",
+  "20 Estratégias Operacionais com Checklist",
   "Diagnóstico Diário Tarot Trader",
   "S.O.S Anti-Tilt com Respiração 4-7-8",
   "100% Funcional no Modo Avião",

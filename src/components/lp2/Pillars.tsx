@@ -1,5 +1,15 @@
 import { useEffect, useRef, useState } from "react";
-import { Bell, ClipboardCheck, Headphones, Laptop, Pause, Play, Siren, Sparkles } from "lucide-react";
+import {
+  Bell,
+  ClipboardCheck,
+  Crosshair,
+  Headphones,
+  Laptop,
+  Pause,
+  Play,
+  Siren,
+  Sparkles,
+} from "lucide-react";
 import { Reveal, SectionTitle } from "./Reveal";
 import { TarotDemo } from "./TarotDemo";
 import { WaveBars } from "./AppMockup";
@@ -18,6 +28,13 @@ const PILLARS = [
     title: "Audioteca & Ondas Binaurais",
     sub: "Alfa 10 Hz e Teta 6 Hz",
     text: "Sintetizador nativo de frequências, ancoragem pré-market, descompressão pós-loss e reprogramação mental.",
+  },
+  {
+    icon: Crosshair,
+    tone: "text-amber border-amber/30 bg-amber/10",
+    title: "Biblioteca de 20 Estratégias",
+    sub: "Playbooks com checklist interativo",
+    text: "Smart Money, Momentum, Mean Reversion, Consolidação e Price Action — regras de entrada, stop e alvo, diagramas e estudos de caso para validar o setup antes de clicar.",
   },
   {
     icon: ClipboardCheck,
@@ -144,7 +161,7 @@ export function Pillars() {
       <div className="section-shell">
         <Reveal>
           <SectionTitle
-            eyebrow="6 pilares"
+            eyebrow="7 pilares"
             title="Um sistema completo de blindagem mental operacional"
             subtitle="Cada módulo ataca um ponto exato onde o emocional destrói o resultado técnico."
           />
@@ -152,7 +169,11 @@ export function Pillars() {
 
         <div className="mt-14 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {PILLARS.map((p, i) => (
-            <Reveal key={p.title} delay={i * 0.06}>
+            <Reveal
+              key={p.title}
+              delay={i * 0.06}
+              className={PILLARS.length % 3 === 1 && i === PILLARS.length - 1 ? "lg:col-span-3" : ""}
+            >
               <div className="glass-card h-full rounded-2xl p-6 transition-all duration-300 hover:-translate-y-1.5 hover:border-cyan/30">
                 <span className={`grid size-11 place-items-center rounded-xl border ${p.tone}`}>
                   <p.icon className="size-5" />

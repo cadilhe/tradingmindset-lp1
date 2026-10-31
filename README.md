@@ -10,6 +10,8 @@ Landing Pages de alta conversão para o produto **Trading Mindset & Discipline C
 - **Versão 1 (`/v1`)**: Estilo *Workstation* — layout sóbrio e técnico inspirado em terminais financeiros.
 - **Versão 2 (`/v2`)**: Estilo *Cyberpunk & Glassmorphism* — layout dinâmico com Tarot Trader interativo, Ondas Binaurais e S.O.S Anti-Tilt.
 
+> 🆕 Ambas as versões destacam a **Biblioteca de 20 Estratégias Operacionais** (app v1.1.0) em uma seção interativa com abas por categoria e checklist pré-trade. Dados em `src/lib/strategies.ts`.
+
 > 📚 Para orientações completas sobre rotas e links de checkout, consulte a [Documentação das Landing Pages](./docs/GUIA_LANDING_PAGES.md).
 
 ---

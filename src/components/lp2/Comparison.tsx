@@ -18,6 +18,11 @@ const ROWS = [
     pro: "Alarme duplo 15 minutos antes de Payroll, CPI, FOMC e Copom",
   },
   {
+    topic: "Decisão de entrada",
+    amateur: "Entra por impulso, sem critério repetível",
+    pro: "Checklist pré-trade de 20 estratégias: só opera com o setup validado",
+  },
+  {
     topic: "Mapeamento de consistência",
     amateur: "Só olha o extrato no fim do mês",
     pro: "Score de Disciplina diário e histórico de 90 dias",

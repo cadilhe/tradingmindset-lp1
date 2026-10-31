@@ -57,6 +57,26 @@ O projeto unifica duas abordagens de design e copy de alta conversão em uma ún
 
 ---
 
+## 🆕 1.1. Seção "Biblioteca de Estratégias Operacionais" (novo módulo do app v1.1.0)
+
+As duas versões apresentam o módulo **Estratégias** do app (20 playbooks de day trade em 5 categorias) em uma seção própria (`#estrategias`), mantendo a página como **uma única rota de venda em scroll contínuo**:
+
+| Item | V1 (Workstation) | V2 (Cyberpunk) |
+| :--- | :--- | :--- |
+| Seção interativa | `src/components/lp1/StrategiesShowcase.tsx` | `src/components/lp2/StrategiesShowcase.tsx` |
+| Conteúdo | Abas por categoria (Smart Money, Momentum, Mean Reversion, Consolidação, Price Action) com badges `FREE`/`PRO` + **checklist interativo** da estratégia "Bandeira Bull ou Bear" com diagrama real | idem |
+| Também atualizados | Navegação, hero, pilares (7), comparativo, oferta PRO e FAQ | Navegação, hero, pilares (7), comparativo, oferta PRO e FAQ |
+
+**Fonte única dos dados:** `src/lib/strategies.ts` (categorias, nomes das 20 estratégias, quais são `FREE`, checklist de exemplo e aviso legal). O diagrama de exemplo está em `src/assets/estrategia-bandeira-exemplo.png` (copiado de `tradingmindset/estrategias/images/`).
+
+> [!NOTE]
+> Se o catálogo do app mudar (nomes, categorias ou estratégias gratuitas), atualize apenas `src/lib/strategies.ts`. As estratégias gratuitas atuais são: *Order Block do Smart Money 15M*, *Pullback à MM20 c/ Pivô Confirmado* e *Bandeira Bull ou Bear Pós-Movimento*.
+
+> [!WARNING]
+> Mantenha o texto como **conteúdo educacional** (sem prometer resultados nem sinais de entrada). O aviso `STRATEGY_DISCLAIMER` já é exibido na seção.
+
+---
+
 ## 🚀 2. Como Escolher uma Versão Específica para a Página Principal (`/`)
 
 Se você desejar que ao acessar a raiz do site (`https://seudominio.com/`) o usuário veja diretamente a **Versão 1** ou a **Versão 2** (em vez do Hub comparativo):

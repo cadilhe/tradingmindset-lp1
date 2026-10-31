@@ -4,6 +4,7 @@ import { CHECKOUT_URL } from "@/lib/offer";
 
 const BENEFITS = [
   "Catálogo completo com +20 áudios e frequências",
+  "Biblioteca completa com 20 estratégias operacionais e checklists interativos",
   "Download offline no celular (modo avião)",
   "Tarot Trader com histórico completo de 90 dias",
   "Sincronização em nuvem em tempo real (mobile + web)",

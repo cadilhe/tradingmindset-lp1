@@ -13,6 +13,10 @@ const FAQ = [
     a: "A liberação é imediata. Você recebe um e-mail de confirmação e entra no app (web ou celular) usando o mesmo e-mail da compra.",
   },
   {
+    q: "O que é a Biblioteca de Estratégias Operacionais?",
+    a: "São 20 playbooks de day trade organizados em 5 categorias (Smart Money, Momentum, Mean Reversion, Consolidação e Price Action), com regras de entrada, stop e alvo, gestão de posição, diagramas e checklist interativo. 3 estratégias ficam liberadas no plano gratuito; as 20 fazem parte do Trader PRO. É conteúdo educacional, não uma sala de sinais.",
+  },
+  {
     q: "Funciona sem internet (modo offline)?",
     a: "Sim. Os áudios e frequências podem ser baixados no celular e os protocolos funcionam 100% no modo avião.",
   },
