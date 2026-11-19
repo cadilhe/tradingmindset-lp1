@@ -59,6 +59,8 @@ export function Pricing() {
 
             <a
               href={CHECKOUT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-9 flex items-center justify-center rounded-2xl bg-accent px-6 py-4 text-center text-sm font-extrabold uppercase tracking-wide text-accent-foreground transition-transform hover:scale-[1.015] active:scale-95 sm:text-base"
             >
               Quero garantir minha vaga com desconto

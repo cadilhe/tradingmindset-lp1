@@ -39,6 +39,8 @@ export function Hero() {
           <div className="mt-8 max-w-xl">
             <a
               href={CHECKOUT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="animate-pulse-glow flex w-full items-center justify-center gap-2 rounded-2xl bg-accent px-6 py-4 text-center text-sm font-extrabold uppercase tracking-wide text-accent-foreground transition-transform hover:scale-[1.015] active:scale-95 sm:text-base"
             >
               <Zap className="size-5" /> Quero desbloquear meu acesso Trader PRO agora

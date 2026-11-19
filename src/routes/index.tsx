@@ -1,8 +1,9 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Activity, ArrowRight, Eye, Layers, ShieldCheck, Sparkles, Zap } from "lucide-react";
+import { Activity, ArrowRight, Download, Eye, Layers, ShieldCheck, Sparkles, Zap } from "lucide-react";
 import { useState } from "react";
 import { LandingV1 } from "@/components/lp1/LandingV1";
 import { LandingV2 } from "@/components/lp2/LandingV2";
+import { PLAYSTORE_URL, LANDING_V1_URL, LANDING_V2_URL } from "@/lib/offer";
 
 const TITLE = "Trading Mindset PRO — Hub de Landing Pages (V1 & V2)";
 const DESCRIPTION =
@@ -128,6 +129,14 @@ function IndexPage() {
             >
               /v2
             </Link>
+            <a
+              href={PLAYSTORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hidden sm:inline-flex items-center gap-1.5 rounded-lg border border-emerald/40 bg-emerald/10 px-3 py-1.5 text-xs font-bold text-emerald transition-colors hover:bg-emerald/20 shadow-glow"
+            >
+              <Download className="size-3.5" /> App Play Store
+            </a>
           </div>
         </div>
       </header>
@@ -266,14 +275,25 @@ function IndexPage() {
               </p>
             </div>
           </div>
-          <div className="mt-6 grid gap-4 sm:grid-cols-2">
+          <div className="mt-6 grid gap-4 sm:grid-cols-3">
             <div className="rounded-xl border border-border bg-background-deep/60 p-4">
               <p className="text-xs font-bold text-primary">Campanha A (Workstation):</p>
-              <code className="mt-1 block text-sm text-foreground">https://seu-dominio.com/v1</code>
+              <code className="mt-1 block text-xs sm:text-sm text-foreground break-all">{LANDING_V1_URL}</code>
             </div>
             <div className="rounded-xl border border-border bg-background-deep/60 p-4">
               <p className="text-xs font-bold text-cyan">Campanha B (Cyberpunk):</p>
-              <code className="mt-1 block text-sm text-foreground">https://seu-dominio.com/v2</code>
+              <code className="mt-1 block text-xs sm:text-sm text-foreground break-all">{LANDING_V2_URL}</code>
+            </div>
+            <div className="rounded-xl border border-emerald/30 bg-emerald/5 p-4">
+              <p className="text-xs font-bold text-emerald">Aplicativo Oficial:</p>
+              <a
+                href={PLAYSTORE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-1 block text-xs sm:text-sm text-emerald underline truncate hover:text-emerald/80"
+              >
+                Abrir na Google Play Store →
+              </a>
             </div>
           </div>
         </div>

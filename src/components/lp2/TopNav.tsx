@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Activity, Flame, Menu, ShieldCheck, X } from "lucide-react";
-import { CHECKOUT_URL } from "@/lib/offer";
+import { CHECKOUT_URL, PLAYSTORE_URL, LANDING_HUB_URL, LANDING_V1_URL } from "@/lib/offer";
 
 const LINKS = [
   { href: "#modulos", label: "Módulos" },
@@ -45,7 +45,13 @@ export function TopNav() {
           </div>
           <div className="flex items-center gap-2">
             <a
-              href="/v1"
+              href={LANDING_HUB_URL}
+              className="hidden sm:inline-flex items-center rounded-md border border-border bg-card/60 px-2 py-0.5 text-[11px] font-semibold text-muted-foreground hover:text-foreground"
+            >
+              Hub de Versões
+            </a>
+            <a
+              href={LANDING_V1_URL}
               className="inline-flex items-center rounded-md border border-cyan/40 bg-cyan/10 px-2 py-0.5 text-[11px] font-semibold text-cyan hover:bg-cyan/20"
             >
               Ver Versão 1 (Workstation)
@@ -111,13 +117,21 @@ export function TopNav() {
                 </a>
               ))}
               <a
-                href="/v1"
+                href={LANDING_HUB_URL}
+                className="rounded-lg px-3 py-2.5 text-sm font-medium text-muted-foreground hover:bg-card"
+              >
+                ← Voltar ao Hub Central
+              </a>
+              <a
+                href={LANDING_V1_URL}
                 className="rounded-lg px-3 py-2.5 text-sm font-medium text-cyan hover:bg-card"
               >
                 → Ver Versão 1 (Workstation)
               </a>
               <a
                 href={CHECKOUT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="mt-2 rounded-xl bg-cyan/15 px-3 py-3 text-center text-sm font-bold text-cyan"
               >
                 Garantir Acesso PRO

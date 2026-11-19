@@ -26,7 +26,7 @@ import heroImage from "@/assets/trading-workstation.jpg";
 import { Button } from "@/components/ui/button";
 import { StrategiesShowcase } from "@/components/lp1/StrategiesShowcase";
 import { cn } from "@/lib/utils";
-import { CHECKOUT_URL } from "@/lib/offer";
+import { CHECKOUT_URL, PLAYSTORE_URL, LANDING_HUB_URL, LANDING_V2_URL } from "@/lib/offer";
 
 const navigation = [
   ["Módulos", "pilares"],
@@ -140,9 +140,15 @@ function Header() {
           <span className="hidden sm:inline">• Versão 2026 com 20 Estratégias, Tarot Trader e frequências binaurais •</span>{" "}
           <Countdown />
         </div>
-        <div>
+        <div className="flex items-center gap-2">
           <a
-            href="/v2"
+            href={LANDING_HUB_URL}
+            className="hidden sm:inline-flex items-center rounded border border-border bg-card/60 px-2 py-0.5 text-[11px] font-semibold text-muted-foreground hover:text-foreground"
+          >
+            Hub de Versões
+          </a>
+          <a
+            href={LANDING_V2_URL}
             className="inline-flex items-center rounded border border-primary/40 bg-primary/10 px-2 py-0.5 text-[11px] font-bold text-primary hover:bg-primary/20"
           >
             Ver Versão 2 (Cyberpunk) →
@@ -203,7 +209,13 @@ function Header() {
             </button>
           ))}
           <a
-            href="/v2"
+            href={LANDING_HUB_URL}
+            className="rounded-md px-4 py-3 text-left text-sm text-muted-foreground hover:bg-accent"
+          >
+            ← Voltar ao Hub Central
+          </a>
+          <a
+            href={LANDING_V2_URL}
             className="rounded-md px-4 py-3 text-left text-sm text-primary hover:bg-accent"
           >
             → Ver Versão 2 (Cyberpunk)
@@ -458,6 +470,8 @@ export function LandingV1() {
             <div className="mt-8">
               <a
                 href={CHECKOUT_URL}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex min-h-14 items-center justify-center gap-2 rounded-md bg-primary px-7 text-base font-bold text-primary-foreground shadow-glow transition-all duration-200 hover:-translate-y-0.5 hover:bg-primary/90 active:scale-[0.98]"
               >
                 Quero desbloquear meu acesso PRO <ArrowRight className="size-5" />
@@ -671,6 +685,8 @@ export function LandingV1() {
             </ul>
             <a
               href={CHECKOUT_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="mt-9 flex min-h-14 w-full items-center justify-center gap-2 rounded-md bg-urgency px-7 text-base font-bold text-urgency-foreground shadow-gold transition-all duration-200 hover:-translate-y-0.5 hover:bg-urgency/90 active:scale-[0.98]"
             >
               Quero garantir minha vaga com desconto <ArrowRight className="size-5" />
