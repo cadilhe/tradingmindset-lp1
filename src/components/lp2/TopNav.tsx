@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { Activity, Flame, Menu, ShieldCheck, X } from "lucide-react";
-import { CHECKOUT_URL, PLAYSTORE_URL, LANDING_HUB_URL, LANDING_V1_URL } from "@/lib/offer";
+import { CHECKOUT_URL } from "@/lib/offer";
 
 const LINKS = [
   { href: "#modulos", label: "Módulos" },
@@ -30,33 +30,17 @@ export function TopNav() {
   return (
     <div className="fixed inset-x-0 top-0 z-50">
       <div className="bg-urgency border-b border-border backdrop-blur-md">
-        <div className="section-shell flex flex-wrap items-center justify-between gap-x-3 gap-y-1 py-1.5 text-center text-[0.72rem] font-medium sm:text-xs">
-          <div className="flex flex-wrap items-center gap-x-3 gap-y-1">
-            <span className="inline-flex items-center gap-1.5 text-amber">
-              <Flame className="size-3.5" /> Acesso Oficial Liberado
-            </span>
-            <span className="hidden text-muted-foreground sm:inline">•</span>
-            <span className="text-foreground/90">
-              Versão 2026 com 20 Estratégias Operacionais, Tarot Trader e Frequências Binaurais
-            </span>
-            <span className="rounded-full border border-amber/40 bg-background-deep/60 px-2 py-0.5 font-mono font-bold text-amber">
-              {time}
-            </span>
-          </div>
-          <div className="flex items-center gap-2">
-            <a
-              href={LANDING_HUB_URL}
-              className="hidden sm:inline-flex items-center rounded-md border border-border bg-card/60 px-2 py-0.5 text-[11px] font-semibold text-muted-foreground hover:text-foreground"
-            >
-              Hub de Versões
-            </a>
-            <a
-              href={LANDING_V1_URL}
-              className="inline-flex items-center rounded-md border border-cyan/40 bg-cyan/10 px-2 py-0.5 text-[11px] font-semibold text-cyan hover:bg-cyan/20"
-            >
-              Ver Versão 1 (Workstation)
-            </a>
-          </div>
+        <div className="section-shell flex flex-wrap items-center justify-center gap-x-3 gap-y-1 py-1.5 text-center text-[0.72rem] font-medium sm:text-xs">
+          <span className="inline-flex items-center gap-1.5 text-amber">
+            <Flame className="size-3.5" /> Acesso Oficial Liberado
+          </span>
+          <span className="hidden text-muted-foreground sm:inline">•</span>
+          <span className="text-foreground/90">
+            Versão 2026 com 20 Estratégias Operacionais, Tarot Trader e Frequências Binaurais
+          </span>
+          <span className="rounded-full border border-amber/40 bg-background-deep/60 px-2 py-0.5 font-mono font-bold text-amber">
+            {time}
+          </span>
         </div>
       </div>
 
@@ -69,7 +53,7 @@ export function TopNav() {
             <span className="text-sm font-extrabold uppercase tracking-[0.12em] sm:text-base">
               Trading <span className="text-gradient-accent">Mindset</span>
               <span className="ml-1 align-super text-[0.6rem] font-bold tracking-widest text-amber">
-                PRO (V2)
+                PRO
               </span>
             </span>
           </a>
@@ -116,18 +100,6 @@ export function TopNav() {
                   {l.label}
                 </a>
               ))}
-              <a
-                href={LANDING_HUB_URL}
-                className="rounded-lg px-3 py-2.5 text-sm font-medium text-muted-foreground hover:bg-card"
-              >
-                ← Voltar ao Hub Central
-              </a>
-              <a
-                href={LANDING_V1_URL}
-                className="rounded-lg px-3 py-2.5 text-sm font-medium text-cyan hover:bg-card"
-              >
-                → Ver Versão 1 (Workstation)
-              </a>
               <a
                 href={CHECKOUT_URL}
                 target="_blank"

@@ -26,7 +26,7 @@ import heroImage from "@/assets/trading-workstation.jpg";
 import { Button } from "@/components/ui/button";
 import { StrategiesShowcase } from "@/components/lp1/StrategiesShowcase";
 import { cn } from "@/lib/utils";
-import { CHECKOUT_URL, PLAYSTORE_URL, LANDING_HUB_URL, LANDING_V2_URL } from "@/lib/offer";
+import { CHECKOUT_URL } from "@/lib/offer";
 
 const navigation = [
   ["Módulos", "pilares"],
@@ -134,25 +134,11 @@ function Header() {
   const [open, setOpen] = useState(false);
   return (
     <div className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur-xl">
-      <div className="announcement flex min-h-9 items-center justify-between px-4 text-center text-[11px] font-bold uppercase tracking-[0.12em] sm:text-xs">
-        <div className="flex items-center gap-2">
+      <div className="announcement flex min-h-9 items-center justify-center px-4 text-center text-[11px] font-bold uppercase tracking-[0.12em] sm:text-xs">
+        <div className="flex flex-wrap items-center justify-center gap-2">
           <Zap className="size-3.5 text-urgency" /> Acesso oficial liberado{" "}
           <span className="hidden sm:inline">• Versão 2026 com 20 Estratégias, Tarot Trader e frequências binaurais •</span>{" "}
           <Countdown />
-        </div>
-        <div className="flex items-center gap-2">
-          <a
-            href={LANDING_HUB_URL}
-            className="hidden sm:inline-flex items-center rounded border border-border bg-card/60 px-2 py-0.5 text-[11px] font-semibold text-muted-foreground hover:text-foreground"
-          >
-            Hub de Versões
-          </a>
-          <a
-            href={LANDING_V2_URL}
-            className="inline-flex items-center rounded border border-primary/40 bg-primary/10 px-2 py-0.5 text-[11px] font-bold text-primary hover:bg-primary/20"
-          >
-            Ver Versão 2 (Cyberpunk) →
-          </a>
         </div>
       </div>
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-5 lg:px-8">
@@ -165,7 +151,7 @@ function Header() {
             <Shield className="size-5" />
           </span>
           <span className="text-sm font-extrabold tracking-[0.08em]">
-            TRADING MINDSET <b className="text-urgency">PRO (V1)</b>
+            TRADING MINDSET <b className="text-urgency">PRO</b>
           </span>
         </button>
         <nav className="hidden items-center gap-7 lg:flex">
@@ -208,18 +194,6 @@ function Header() {
               {label}
             </button>
           ))}
-          <a
-            href={LANDING_HUB_URL}
-            className="rounded-md px-4 py-3 text-left text-sm text-muted-foreground hover:bg-accent"
-          >
-            ← Voltar ao Hub Central
-          </a>
-          <a
-            href={LANDING_V2_URL}
-            className="rounded-md px-4 py-3 text-left text-sm text-primary hover:bg-accent"
-          >
-            → Ver Versão 2 (Cyberpunk)
-          </a>
         </nav>
       )}
     </div>
